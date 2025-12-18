@@ -1,0 +1,487 @@
+#EXTM3U
+#EXTINF:16,Canal 3
+#EXTVLCOPT:https://1.bp.blogspot.com/-kX675YqpJ8c/XR564VpbITI/AAAAAAAAIgE/6InHi9b2H1wXYdsmTvVAmoanYxjuHiQygCLcBGAs/s1600/tn23%2Bnoticas%2Ben%2Bvivo%2B-%2Bnoticias%2Bde%2Bguatemala.png
+#EXTVLCOPT:network-caching=1000
+https://d2qsan2ut81n2k.cloudfront.net/live/6b4f0a21-94d5-4fb6-9742-0f78923723cd/ts:abr.m3u8
+#EXTINF:0,TN23
+#EXTVLCOPT:https:https://www.youtube.com/channel/UCJcN367ge_Yo1p7b20_KSaA
+#EXTVLCOPT:network-caching=1000
+https://d2qsan2ut81n2k.cloudfront.net/live/0fa8c94f-fc47-466d-beda-8fc43bf963d7/ts:abr.m3u8
+#EXTINF:0,Canal 7
+#EXTVLCOPT:https://mi.tv/gt/canales/televisiete
+#EXTVLCOPT:network-caching=1000
+https://d2qsan2ut81n2k.cloudfront.net/live/ce4f4915-0383-4e38-834b-6aca224d028e/ts:abr.m3u8
+#EXTINF:0,Canal 27
+#EXTVLCOPT:https://es.wikipedia.org/wiki/Canal_27_%28Guatemala%29
+#EXTVLCOPT:network-caching=1000
+https://ch1-c27.duin.dev/hls/0/stream.m3u8
+#EXTINF:0,GUATEVISION
+#EXTVLCOPT:https://www.prensalibre.com/wp-content/uploads/2018/12/a98dd3f9-34e5-43e8-991b-b1ec6df17fa9.jpg?quality=52&w=640
+#EXTVLCOPT:network-caching=1000
+https://live.eu-north-1b.cf.dmcdn.net/sec2(l8jhn6rz_YEfP7gdicW7sAqaPQi3dmwuDW6xG4E56UzAn1sPnzemNnsxKjL5N-rP--jtQfa-cnhWSsLP3v-53FcWsQnR-ZYxGjw2X8aWDuMl3hksS8Ne71jhtvO5raU4)/dm/3/x8lth64/s/live-380.m3u8
+#EXTINF:0,A+GUATE
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://channel2-tva.duin.dev/tv/streaming/2/stream.m3u8
+#EXTINF:0,3AB LATINO
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://3abn.bozztv.com/3abn2/Lat_live/smil:Lat_live.smil/playlist.m3u8
+#EXTINF:0,5tv Corrientes
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+http://www.coninfo.net:1935/tvcinco/live1/playlist.m3u8
+#EXTINF:0,WISE TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://live.enhdtv.com:8081/8150/index.m3u8
+#EXTINF:0,TELE VALENCIA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://play.cdn.enetres.net/9E9557EFCEBB43A89CEC8FBD3C500247022/028/playlist.m3u8
+#EXTINF:0,LA MARINA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streaming005.gestec-video.com/hls/canal24.m3u8
+#EXTINF:0,8NTV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://60417ddeaf0d9.streamlock.net/ntv/videontv/playlist.m3u8
+#EXTINF:0,CANAL 13 CULTURA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://origin.dpsgo.com/ssai/event/GI-9cp_bT8KcerLpZwkuhw/master.m3u8
+#EXTINF:0,13 FESTIVAL
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://origin.dpsgo.com/ssai/event/Nftd0fM2SXasfDlRphvUsg/master.m3u8
+#EXTINF:0,13 HUMOR
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://origin.dpsgo.com/ssai/event/cKWySXKgSK-SzlJmESkOWw/master.m3u8
+#EXTINF:0,13 KIDS
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://origin.dpsgo.com/ssai/event/LhHrVtyeQkKZ-Ye_xEU75g/master.m3u8
+#EXTINF:0,13 MAX TELEVISION
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+http://coninfo.net:1935/13maxhd/live13maxtvnuevo/playlist.m3u8
+#EXTINF:0,13 REALITIES
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://origin.dpsgo.com/ssai/event/g7_JOM0ORki9SR5RKHe-Kw/master.m3u8
+#EXTINF:0,13 TELESERIES
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://origin.dpsgo.com/ssai/event/f4TrySe8SoiGF8Lu3EIq1g/master.m3u8
+#EXTINF:0,15 TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://cdn.fastocloud.com/leonel.m3u8
+#EXTINF:0, CANAL DE NOTICIAS 24/7
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://panel.host-live.com:19360/cn247tv/cn247tv.m3u8
+#EXTINF:0,24/7 ESPAÑA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://d32rw80ytx9uxs.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-vlldndmow4yre/24HES.m3u8
+#EXTINF:0,88 ESTEREO
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+http://k3.usastreams.com/CableLatino/88stereo/playlist.m3u8
+#EXTINF:0,ANTEQUERA
+#EXTVLCOPT:http-referrer=https://www.101tv.es/antequera/
+#EXTVLCOPT:network-caching=1000
+https://www.streaming101tv.es:19360/antequera/antequera.m3u8
+#EXTINF:0,OPA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://5fc584f3f19c9.streamlock.net/genteopa/videogenteopa/playlist.m3u8
+#EXTINF:0,A & R ADVENTISTA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+http://51.222.9.192:3589/stream/play.m3u8
+#EXTINF:0,ACENTO TV
+#EXTVLCOPT:http-referrer=https://acentotv01.streamprolive.com/i/cp/hls/player.html
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://acentotv01.streamprolive.com/hls/live.m3u8
+#EXTINF:0,ACTIVA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streamtv.mediasector.es/hls/activatv/index.m3u8
+#EXTINF:0,ADN 40
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://mdstrm.com/live-stream-playlist/60b578b060947317de7b57ac.m3u8
+#EXTINF:0,ADORAM
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://live20.bozztv.com/giatv/giatv-adoram/adoram/chunks.m3u8
+#EXTINF:0,AE RADIO 24/7
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://tls-cl.cdnz.cl/aeradio/live/playlist.m3u8
+#EXTINF:0,AGENDA 56
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://cloudflare.streamgato.us:3148/live/agenda56tvlive.m3u8
+#EXTINF:0,AGUACATE TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streamtv.intervenhosting.net:3040/hybrid/play.m3u8
+#EXTINF:0,AHORA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://tv.livestreaminggroup.info:3513/live/canal35live.m3u8
+#EXTINF:0,AION TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://vdo.aiontelevision.com:3735/live/aiontelevisionlive.m3u8
+#EXTINF:0,AIRE DE SANTA FE
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://unlimited1-us.dps.live/airedesantafetv/airedesantafetv.smil/playlist.m3u8
+#EXTINF:0,ALACANTI TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streaming01.gestec-video.com/hls/artequatreAlacanti.m3u8
+#EXTINF:0,ALCANCE TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://5bf8041cb3fed.streamlock.net/AlcanceTV/AlcanceTV/playlist.m3u8
+#EXTINF:0,ALCARRIA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+http://217.182.77.27/live/alcarriatv-livestream.m3u8
+#EXTINF:0,ALCARRIZOS TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://5790d294af2dc.streamlock.net/alcarrizostv/alcarrizostv/playlist.m3u8
+#EXTINF:0,ALIENTO TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://627bb251f23c7.streamlock.net:444/Alientoenvivo/Alientoenvivo/playlist.m3u8
+#EXTINF:0,ALSACIAS TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://s.emisoras.tv:8081/atv/index.m3u8
+#EXTINF:0,ALTANTO TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streaming.altantotv.domiplay.net/hls/0/stream.m3u8
+#EXTINF:0,AMÉTV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://ss2.tvrdomi.com:1936/ame47/ame47/playlist.m3u8
+#EXTINF:0,AMERICA ESTEREO
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://video.makrodigital.com/americaestereoguayaquil/americaestereoguayaquil/playlist.m3u8
+#EXTINF:0,AMERICA ESTEREO IBARRA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://video.makrodigital.com/americaestereoibarra/americaestereoibarra/playlist.m3u8
+#EXTINF:0,ESTEREO TULCAN
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://video.makrodigital.com/americaestereotulcan/americaestereotulcan/playlist.m3u8
+#EXTINF:0,AMERICA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://live.gideo.video/americateve2/master.m3u8
+#EXTINF:0,AMERICA TV 2
+#EXTVLCOPT:http-user-agent=Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, como Gecko) Chrome/112.0.0.0 Mobile Safari/537.36
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://prepublish.f.qaotic.net/a07/americahls-100056/playlist_720p.m3u8
+#EXTINF:0,Amigos Tv Chiquimula
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://antmedia.cablevisionrobles.com:5443/LiveApp/streams/CqwAgRagMvBNYN8c1731608980342.m3u8
+#EXTINF:0,AMX NOTICIAS
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://5e50264bd6766.streamlock.net/mexiquense2/videomexiquense2/playlist.m3u8
+#EXTINF:0,ANDALUCIA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+http://176.65.146.237:8401/play/a09g/index.m3u8
+#EXTINF:0,ANGEL TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://janya-digimix.akamaized.net/vglive-sk-351398/spanish/ngrp:angelspanish_all/playlist.m3u8
+#EXTINF:0,ANGIENET
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://servilive.com:3624/stream/play.m3u8
+#EXTINF:0,ANIME VISION
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://d1ujfw1zyymzyd.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-a6fukwkbxmex8/live/fast-channel-animevision-64527ec0/fast-channel-animevision-64527ec0.m3u8
+#EXTINF:0,ANIME VISION CLASSICS
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://d82pyvmcw2kdc.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-swfivzrzwamaq/live/fast-channel-animevisionclassics-efc8dc6d/fast-channel-animevisionclassics-efc8dc6d.m3u8
+#EXTINF:0,ANIME ZONE
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+http://animezonetv.net/hls/stream.m3u8
+#EXTINF:0,ANTARES TELEVISION
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://5c3fb01839654.streamlock.net:1963/iptvantares/liveantarestv/playlist.m3u8
+#EXTINF:0,ANTENA 3
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+http://176.65.146.237:8401/play/a0ae/index.m3u8
+#EXTINF:0,ANTENA 21
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://alba-do-antena7-c21.stream.mediatiquestream.com/index.m3u8
+#EXTINF:0,ANTENA 6
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://video1.azulstream.com:8081/antenaseistv/index.m3u8
+#EXTINF:0,ANTENA SUR
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://cloudpro.servidoresdestream.com:8081/8010/index.m3u8
+#EXTINF:0,ANTENA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://5ca9af4645e15.streamlock.net/grd/videogrd/playlist.m3u8
+#EXTINF:0,ANTENA RADIO
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://tvdatta.com:3578/live/antenaunolive.m3u8
+#EXTINF:0,ANTOFAGASTA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://unlimited6-cl.dps.live/atv/atv.smil/playlist.m3u8
+#EXTINF:0,ANZOATEGUI
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://vcp2.myplaytv.com/anzoateguitv/anzoateguitv/playlist.m3u8
+#EXTINF:0,ARABI TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streamtv2.elitecomunicacion.cloud:3628/live/arabitv2025live.m3u8
+#EXTINF:0,ARAGON TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://viamotionhsi.netplus.ch/live/eds/aragontv/browser-HLS8/aragontv.m3u8
+#EXTINF:0,ARBOL DE VIDA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://yupistream.top:19360/livearbol/livearbol.m3u8
+#EXTINF:0,AREA 809
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://vdo.voxhdnet.com:3159/stream/play.m3u8
+#EXTINF:0,ARUBA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://cdn01.setar.aw/Canal49/canal49/playlist.m3u8
+#EXTINF:0,ASIRIA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://video2.lhdserver.es/asiritv/live.m3u8
+#EXTINF:0,ATACAMA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://v2.tustreaming.cl/atacamanoticias/index.m3u8
+#EXTINF:0,ATACAMA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://v2.tustreaming.cl/atacamatv/index.m3u8
+#EXTINF:0,ATN TELEVISION
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streaming5.globalhostla.com/rtplive/atntelevision/playlist.m3u8
+#EXTINF:0,ATRESERIES
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+http://176.65.146.237:8401/play/a0ai/index.m3u8
+#EXTINF:0,ATV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://alba-pe-atv-atv.stream.mediatiquestream.com/index.m3u8
+#EXTINF:0,ATV SUR TODA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://alba-pe-atv-atvsur.stream.mediatiquestream.com/index.m3u8
+#EXTINF:0,ATV+
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://alba-pe-atv-atvmas.stream.mediatiquestream.com/index.m3u8
+#EXTINF:0,AUDAZ TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://cloud2.streaminglivehd.com:1936/8264/8264/playlist.m3u8
+#EXTINF:0,AURORA FILMS
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://cdn.streamhispanatv.net:3417/live/auroramflive.m3u8
+#EXTINF:0,AUTENTICA TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://live.obslivestream.com/autenticatvmux/index.m3u8
+#EXTINF:0,AZAHARES RADIO
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streamyes.alsolnet.com/azaharesfm/live/playlist.m3u8
+#EXTINF:0,Azteca Guate
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://channel1-tva.duin.dev/tv/streaming/2/stream.m3u8
+#EXTINF:0,AZTECA INTERNACIONAL
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://azt-mun.otteravision.com/azt/mun/mun.m3u8
+#EXTINF:0,B15 FRESNILLO
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://s5.mexside.net:1936/lsac/lsac/playlist.m3u8
+#EXTINF:0,B15 ZACATECAZ
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://s5.mexside.net:1936/envio2/envio2/playlist.m3u8
+#EXTINF:0,BABY FIRST
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/c8d16110-566c-4e95-a1df-55d175e9e201/manifest.m3u8
+#EXTINF:0,BABY FIRST SPANISH
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streams2.sofast.tv/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/be6f9eac-280e-4748-b866-2eb2463c1844/manifest.m3u8
+#EXTINF:0,VAMOS TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://video2.getstreamhosting.com:19360/8092/8092.m3u8
+#EXTINF:0,BAYRES TV
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://streaming01.mikrolive.tv/bayrestv/live/playlist.m3u8
+#EXTINF:0,BBC DRAMA
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/60dafb9a0df1ba000758d37b/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&serverSideAds=false&studio_id=viacom&tags=ROKU_CONTENT_TAGS
+#EXTINF:0,BCN GOSPEL
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://live1.ovalcast.com:3641/live/bcngospeltvlive.m3u8
+#EXTINF:0,BELLA VISION
+#EXTVLCOPT:network-caching=1000
+#EXTVLCOPT:network-caching=1000
+https://rdn.essastream.com:3110/live/bellavision8hdlive.m3u8
+#EXTINF:0,HISTORY 2
+#EXTVLCOPT:https://tvcable.fandom.com/es/wiki/History_2
+#EXTVLCOPT:network-caching=1000
+https://cors-proxy.cooks.fyi/https://streamer1.nexgen.bz/HISTORY2/index.m3u8
+#EXTINF:0,NATIONAL GEOGRAPHIC
+#EXTVLCOPT:https://www.slovenia.info/en/press-centre/press-releases/9601-images-of-slovenia-featured-on-national-geographic-webpages-as-part-of-branded-content-partnership
+#EXTVLCOPT:network-caching=1000
+https://cors-proxy.cooks.fyi/https://streamer1.nexgen.bz/NAT_GEO/index.m3u8
+#EXTINF:0,NICKELODEON RETRO
+#EXTVLCOPT:https://www.slovenia.info/en/press-centre/press-releases/9601-images-of-slovenia-featured-on-national-geographic-webpages-as-part-of-branded-content-partnership
+#EXTVLCOPT:network-caching=1000
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5d8d08395f39465da6fb3ec4/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c2a5107-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=919bc5fd-6cce-44a6-bb39-2894dea1c988
+#EXTINF:0,SONY NOVELAS
+#EXTVLCOPT:https://www.vertvcable.com/sony-novelas-en-vivo/
+#EXTVLCOPT:network-caching=1000
+https://a89829b8dca2471ab52ea9a57bc28a35.mediatailor.us-east-1.amazonaws.com/v1/master/0fb304b2320b25f067414d481a779b77db81760d/CanelaTV_SonyCanalNovelas/playlist.m3u8
+#EXTINF:0,CANAL DE LAS ESTRELLAS
+#EXTVLCOPT:https://es.wikipedia.org/wiki/Las_Estrellas
+#EXTVLCOPT:network-caching=1000
+https://channel01-onlymex.akamaized.net/hls/live/2022749/event01/index.m3u8
+#EXTINF:0,ARCHIVOS FORENCES
+#EXTVLCOPT:https://pluto.tv/latam/live-tv/5efb8c19b2678b000780d032
+#EXTVLCOPT:network-caching=1000
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5f984f4a09e92d0007d74647/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&is_lat=1&platform=web&rdid=channel&tags=ROKU_CONTENT_TAGS
+#EXTINF:0,CANAL CLARO
+#EXTVLCOPT:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaWYVJxc8kDms1pmfVOZmHziTtuEewGByPFQ&s
+#EXTVLCOPT:network-caching=1000
+https://stitcher.pluto.tv/stitch/hls/channel/68224482c5d53e1351aaf2f2/master.m3u8?appVersion=1&deviceDNT=0&deviceId=spencer&deviceMake=safari&deviceModel=web&deviceType=web&deviceVersion=1&servertSideAds=false&sid=e3ca3088-b0b3-11f0-ab21-da2bce2249f9
+#EXTINF:0,DISNEY CHANNEL LATINO
+#EXTVLCOPT:https://www.soy502.com/sites/default/files/styles/escalar_image_inline/public/2024/Dic/03/captura_de_pantalla_2024-12-03_a_las_8.13.14_a._m.png
+#EXTVLCOPT:network-caching=1000
+http://201.217.246.177:8000/play/a02r/index.m3u8
+#EXTINF:0,XTREMA ACCION
+#EXTVLCOPT:https://www.cxtv.com.br/img/Tvs/Logo/webp-l/16f8ed90cfdce23eb93131280ab06426.webp
+#EXTVLCOPT:network-caching=1000
+https://stmv6.voxtvhd.com.br/cineaccion/cineaccion/playlist.m3u8
+#EXTINF:0,CINE XOXO
+#EXTVLCOPT:https://public-assets-pressexpress.s3.amazonaws.com/assets/pages/images/2024/05/30/PLUTOCineXOXO_Channel_1080x1080_HeroSquare-srcdbued.png
+#EXTVLCOPT:network-caching=1000
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f5136317aedfb0007016f93/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c27e002-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=308fd9dd-2f8a-441f-b59d-e02f4b0aacd7
+#EXTINF:0,CINE TERROR
+#EXTVLCOPT:https://images.pluto.tv/channels/5dcddf1ed95e740009fef7ab/featuredImage_1730472486481.jpg?auto=&q=70&fit=fill&fill=blur&ixlib=react-9.1.5
+#EXTVLCOPT:network-caching=1000
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5dcddf1ed95e740009fef7ab/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS
+#EXTINF:0,DIOS TV KIDS
+#EXTVLCOPT:https://www.diosteve.org/wp-content/uploads/2022/04/235403078_2666022853698120_5407670730821234601_n-PhotoRoom.png
+#EXTVLCOPT:network-caching=1000
+https://s.emisoras.tv:8081/diostevekids/index.m3u8
+#EXTINF:0,CINE CANAL
+#EXTVLCOPT:https://upload.wikimedia.org/wikipedia/commons/e/e6/CinecanalLA.png
+#EXTVLCOPT:network-caching=1000
+https://cors-proxy.cooks.fyi/https://streamer1.nexgen.bz/CINECANAL/index.m3u8
+#EXTINF:0,BOREAL
+#EXTVLCOPT:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkaGJvarLosjrXDU9DTkBDuOXtGlke7pLA9Q&s
+#EXTVLCOPT:network-caching=1000
+https://cdn.borealtelevision.com:3712/live/borealtelevisionhdlive.m3u8
+#EXTINF:0,AURORA MEDIA FILMS
+#EXTVLCOPT:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd-8374q9tsP1sHkylpdCP5FeTnQ-Rx-r-_g&s
+#EXTVLCOPT:network-caching=1000
+https://cdn.streamhispanatv.net:3417/live/auroramflive.m3u8
+#EXTINF:0,CANAL 13
+#EXTVLCOPT:https://upload.wikimedia.org/wikipedia/commons/f/f2/Canal_13_Guatemala_Logo.svg
+#EXTVLCOPT:network-caching=1000
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/64b9671cdac71b0008f371df/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c27b8f8-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=28fb2aae-fcc1-4b39-a190-1ac70222ae41
+#EXTINF:0,CINE CLASICO
+#EXTVLCOPT:https://images.pluto.tv/channels/64b9671cdac71b0008f371df/featuredImage.jpg
+#EXTVLCOPT:network-caching=1000
+http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/64b9671cdac71b0008f371df/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=6c27b8f8-30d3-11ef-9cf5-e9ddff8ff496&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=28fb2aae-fcc1-4b39-a190-1ac70222ae41
+#EXTINF:0,CINE PREMIER
+#EXTVLCOPT:https://images.pluto.tv/channels/5cf968040ab7d8f181e6a68b/featuredImage.jpg?auto=&q=70&fit=fill&fill=blur&ixlib=react-9.1.5
+#EXTVLCOPT:network-caching=1000
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5cf968040ab7d8f181e6a68b/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS
+#EXTINF:0,CINE TERROR
+#EXTVLCOPT:https://images.pluto.tv/channels/5d8d180092e97a5e107638d3/featuredImage.jpg
+#EXTVLCOPT:network-caching=1000
+https://service-stitcher.clusters.pluto.tv/v1/stitch/embed/hls/channel/5dcddf1ed95e740009fef7ab/master.m3u8?advertisingId=channel&appName=rokuchannel&appVersion=1.0&bmodel=bm1&channel_id=channel&content=channel&content_rating=ROKU_ADS_CONTENT_RATING&content_type=livefeed&coppa=false&deviceDNT=1&deviceId=channel&deviceMake=rokuChannel&deviceModel=web&deviceType=rokuChannel&deviceVersion=1.0&embedPartner=rokuChannel&genre=ROKU_ADS_CONTENT_GENRE&is_lat=1&platform=web&rdid=channel&studio_id=viacom&tags=ROKU_CONTENT_TAGS
+#EXTINF:0,SONY CHANNEL
+#EXTVLCOPT:https://static.wikia.nocookie.net/tvcable/images/3/31/SonyChannel2023LA.png/revision/latest?cb=20231115232012&path-prefix=es
+#EXTVLCOPT:network-caching=1000
+https://live.11-cdn.com/TeleOnce/3fc63fe00050c646635f16b071cd33e2.sdp/playlist.m3u8
+#EXTINF:0,TELE ONCE
+#EXTVLCOPT:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTja4GTI5_LbsL3zn8RWzkukdw8xOLGu3lvxw&s
+#EXTVLCOPT:network-caching=1000
+https://live.11-cdn.com/TeleOnce/3fc63fe00050c646635f16b071cd33e2.sdp/playlist.m3u8
+#EXTINF:0,TELEMUNDO
+#EXTVLCOPT:https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Telemundo_logo_2018.svg/1200px-Telemundo_logo_2018.svg.png
+#EXTVLCOPT:network-caching=1000
+https://nbculocallive.akamaized.net/hls/live/2037499/puertorico/stream1/master_1080.m3u8
+#EXTINF:0,NICKELODEON
+#EXTVLCOPT:https://images.pluto.tv/channels/645952687cb4b100084ed52e/featuredImage_1755273609270.jpg
+#EXTVLCOPT:network-caching=1000
+http://179.51.136.19:8000/play/a0q4/index.m3u8?utc=1765122263&lutc=1765122759
+#EXTINF:0,CINE ADRENALINA
+#EXTVLCOPT:https:https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ziueD51rBWLzjEPMpvxyw-elo_8CturHeQ&s
+#EXTVLCOPT:network-caching=1000
+https://service-stitcher.clusters.pluto.tv/stitch/hls/channel/5d8d164d92e97a5e107638d2/master.m3u8?advertisingId=&appName=web&appStoreUrl=&appVersion=DNT&app_name=&architecture=&buildVersion=&deviceDNT=0&deviceId=5d8d164d92e97a5e107638d2&deviceLat=&deviceLon=&deviceMake=web&deviceModel=web&deviceType=web&deviceVersion=DNT&includeExtendedEvents=false&marketingRegion=US&serverSideAds=false&sid=904&terminate=false&userId=
+#EXTINF:0,XTREMA CARTOONS
+#EXTVLCOPT:https://www.cxtv.com.br/img/Tvs/Logo/webp-l/def4d6a960fc00da49db5898c4a41e48.webp
+#EXTVLCOPT:network-caching=1000
+https://stmv6.voxtvhd.com.br/xtremacartoons/xtremacartoons/playlist.m3u8?hls_ctx=nh131rp7
+#EXTINF:0,TIGUERITOS
+#EXTVLCOPT:data:image/jpeg;base64,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
+#EXTVLCOPT:network-caching=1000
+https://ss2.tvrdomi.com:1936/tigueritostv/tigueritostv/chunklist_w333270371.m3u8
+#EXTINF:0,CLAN INTERNACIONAL
+#EXTVLCOPT:https://upload.wikimedia.org/wikipedia/commons/8/81/Clan_logo.svg
+#EXTVLCOPT:network-caching=1000
+https://rtvelivestream-rtveplayplus.rtve.es/rtvesec/int/clan_int_main_1080.m3u8
