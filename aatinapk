@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>App IPTV con Perfiles, Búsqueda y Favoritos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  body {
+    margin: 0; font-family: Arial, sans-serif; background: #111; color: white;
+    display: flex; flex-direction: column; height: 100vh;
+  }
+  header {
+    background: #222; padding: 12px; font-weight: bold; font-size: 18px; text-align: center;
+  }
+  #profilesScreen, #pinScreen, #app {
+    flex: 1; overflow-y: auto; padding: 20px;
+  }
+  #profilesScreen, #pinScreen {
+    max-width: 400px; margin: 40px auto; background: #222; border-radius: 10px;
+  }
+  .profile-list {
+    display: flex; flex-wrap: wrap; gap: 15px; justify-content: center;
+  }
+  .profile-card {
+    background: #333; border-radius: 8px; padding: 10px; width: 140px; text-align: center;
+    cursor: pointer; position: relative;
+  }
+  .profile-card:hover {
+    background: #444;
+  }
+  .profile-card img {
+    width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 8px;
+    border: 2px solid #555;
+  }
+  .delete-btn {
+    position: absolute; top: 5px; right: 5px;
+    background: #900; border: none; color: white; border-radius: 50%;
+    width: 22px; height: 22px; cursor: pointer; font-weight: bold;
+  }
+  #addProfileBtn {
+    margin-top: 20px; width: 100%; padding: 10px; font-size: 16px;
+    background: #0066ff; border: none; border-radius: 8px; color: white; cursor: pointer;
+  }
+  #addProfileBtn:disabled {
+    background: #444; cursor: not-allowed;
+  }
+  form label {
+    display: block; margin-bottom: 6px; font-size: 14px;
+  }
+  form input, form select {
+    width: 100%; padding: 8px; margin-bottom: 12px; border-radius: 6px;
+    border: none; font-size: 14px;
+  }
+  form button {
+    background: #00bb00; color: white; padding: 10px; width: 100%;
+    border: none; border-radius: 8px; font-size: 16px; cursor: pointer;
+  }
+  form button:disabled {
+    background: #444; cursor: not-allowed;
+  }
+  #pinScreen {
+    text-align: center;
+  }
+  #pinScreen input {
+    font-size: 24px; padding: 10px; width: 80%; max-width: 200px;
+    text-align: center; border-radius: 8px; border: none; margin-bottom: 15px;
+  }
+  #pinError {
+    color: #f44; margin-bottom: 10px; display: none;
+  }
+  #pinScreen button {
+    background: #0066ff; color: white; padding: 10px 20px; border: none;
+    font-size: 16px; border-radius: 8px; cursor: pointer; margin: 5px;
+  }
+  #app {
+    display: flex; flex-direction: column; height: 100%;
+  }
+  #playerContainer {
+    background: black; padding: 10px; text-align: center;
+  }
+  video {
+    width: 100%; max-height: 240px; background: black;
+  }
+  #controls {
+    margin-top: 8px; text-align: center;
+  }
+  #controls button {
+    background: #0066ff; color: white; border: none; margin: 0 6px;
+    padding: 8px 16px; border-radius: 8px; cursor: pointer; font-weight: bold;
+  }
+  #searchContainer {
+    margin: 15px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  #searchInput {
+    flex-grow: 1;
+    padding: 8px; border-radius: 6px; border: none; font-size: 16px;
+  }
+  #favFilterBtn {
+    background: #ffaa00;
+    border: none;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  #favFilterBtn.active {
+    background: #ffaa00;
+    box-shadow: 0 0 8px #ffaa00;
+  }
+  #status {
+    margin-bottom: 10px; color: #aaa; font-size: 14px; text-align: center;
+  }
+  #list {
+    flex: 1; overflow-y: auto; border-top: 1px solid #333;
+  }
+  .channel {
+    padding: 12px 15px; border-bottom: 1px solid #222; cursor: pointer;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .channel:hover {
+    background: #222;
+  }
+  .channel .fav-btn {
+    background: none; border: none; color: gold; font-size: 20px; cursor: pointer;
+  }
+  #logoutBtn {
+    position: fixed; top: 10px; right: 10px; background: #900; color: white;
+    border: none; padding: 8px 12px; font-size: 14px; border-radius: 6px; cursor: pointer;
+    z-index: 1000;
+  }
+</style>
+</head>
+<body>
+
+<header>FIYI_IPTV</header>
+
+<!-- Pantalla selección de perfiles -->
+<div id="profilesScreen">
+  <h2>Selecciona tu perfil</h2>
+  <div class="profile-list" id="profileList"></div>
+  <button id="addProfileBtn">+ Añadir perfil</button>
+
+  <form id="createProfileForm" style="display:none;">
+    <label for="profileName">Nombre</label>
+    <input type="text" id="profileName" maxlength="20" placeholder="Tu nombre" required />
+
+    <label for="profileYear">Año de nacimiento</label>
+    <input type="number" id="profileYear" min="1900" max="2025" placeholder="Ej. 1990" required />
+
+    <label for="profileSex">Sexo</label>
+    <select id="profileSex" required>
+      <option value="" disabled selected>Selecciona</option>
+      <option value="Masculino">Masculino</option>
+      <option value="Femenino">Femenino</option>
+      <option value="Otro">Otro</option>
+    </select>
+
+    <label for="profilePin">PIN (4 dígitos) — opcional</label>
+    <input type="password" id="profilePin" pattern="\d{4}" maxlength="4" placeholder="Ej. 1234" />
+
+    <label for="profileImage">Imagen de perfil</label>
+    <select id="profileImage" required>
+      <option value="avatar1">Avatar 1</option>
+      <option value="avatar2">Avatar 2</option>
+      <option value="avatar3">Avatar 3</option>
+      <option value="avatar4">Avatar 4</option>
+    </select>
+
+    <button type="submit">Crear perfil</button>
+    <button type="button" id="cancelCreate">Cancelar</button>
+  </form>
+</div>
+
+<!-- Pantalla PIN -->
+<div id="pinScreen">
+  <h2>Ingresa el PIN</h2>
+  <input type="password" id="pinInput" maxlength="4" pattern="\d{4}" placeholder="••••" />
+  <div id="pinError">PIN incorrecto</div>
+  <button id="enterPinBtn">Entrar</button>
+  <button id="pinBackBtn">Volver</button>
+</div>
+
+<!-- Pantalla principal IPTV -->
+<div id="app" style="display:none;">
+  <button id="logoutBtn">Cerrar sesión</button>
+
+  <div id="playerContainer">
+    <video id="videoPlayer" controls autoplay muted></video>
+    <div id="controls">
+      <button id="prevBtn">⏮️ Canal anterior</button>
+      <button id="nextBtn">⏭️ Canal siguiente</button>
+      <button id="toggleFavBtn">⭐ Favorito</button>
+    </div>
+  </div>
+
+  <div id="searchContainer">
+    <input type="text" id="searchInput" placeholder="Buscar canales..." autocomplete="off" />
+    <button id="favFilterBtn" title="Mostrar solo favoritos">Mostrar Favoritos</button>
+  </div>
+
+  <div id="status">Cargando canales…</div>
+  <div id="list"></div>
+</div>
+
+<script>
+  // URL del archivo M3U8 (puedes cambiarlo por el tuyo)
+  const m3uUrl = "https://raw.githubusercontent.com/fretslitz1116-create/Fredyl1_/main/fredie%20prueba%201.m3u8";
+
+  // Avatares para perfiles
+  const avatars = {
+    avatar1: "https://i.pravatar.cc/80?img=1",
+    avatar2: "https://i.pravatar.cc/80?img=2",
+    avatar3: "https://i.pravatar.cc/80?img=3",
+    avatar4: "https://i.pravatar.cc/80?img=4"
+  };
+
+  // Variables y estados
+  let profiles = [];
+  let currentProfile = null;
+  let channelsList = [];
+  let filteredChannels = [];
+  let currentChannelIndex = 0;
+  let favorites = [];
+  let showingFavoritesOnly = false;
+
+  // ELEMENTOS DOM
+  const profilesScreen = document.getElementById('profilesScreen');
+  const profileListEl = document.getElementById('profileList');
+  const addProfileBtn = document.getElementById('addProfileBtn');
+  const createProfileForm = document.getElementById('createProfileForm');
+  const cancelCreateBtn = document.getElementById('cancelCreate');
+  const profileNameInput = document.getElementById('profileName');
+  const profileYearInput = document.getElementById('profileYear');
+  const profileSexInput = document.getElementById('profileSex');
+  const profilePinInput = document.getElementById('profilePin');
+  const profileImageSelect = document.getElementById('profileImage');
+
+  const pinScreen = document.getElementById('pinScreen');
+  const pinInput = document.getElementById('pinInput');
+  const pinError = document.getElementById('pinError');
+  const enterPinBtn = document.getElementById('enterPinBtn');
+  const pinBackBtn = document.getElementById('pinBackBtn');
+
+  const app = document.getElementById('app');
+  const logoutBtn = document.getElementById('logoutBtn');
+
+  const playerContainer = document.getElementById('playerContainer');
+  const videoPlayer = document.getElementById('videoPlayer');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const toggleFavBtn = document.getElementById('toggleFavBtn');
+
+  const searchInput = document.getElementById('searchInput');
+  const favFilterBtn = document.getElementById('favFilterBtn');
+  const status = document.getElementById('status');
+  const list = document.getElementById('list');
+
+  // Guardar perfiles en localStorage
+  function saveProfiles() {
+    localStorage.setItem('iptvProfiles', JSON.stringify(profiles));
+  }
+
+  // Cargar perfiles desde localStorage
+  function loadProfiles() {
+    const data = localStorage.getItem('iptvProfiles');
+    profiles = data ? JSON.parse(data) : [];
+  }
+
+  // Guardar favoritos por perfil
+  function saveFavorites() {
+    if (!currentProfile) return;
+    localStorage.setItem(`favorites_${currentProfile.name}`, JSON.stringify(favorites));
+  }
+
+  // Cargar favoritos
+  function loadFavorites() {
+    if (!currentProfile) return;
+    const data = localStorage.getItem(`favorites_${currentProfile.name}`);
+    favorites = data ? JSON.parse(data) : [];
+  }
+
+  // Renderizar perfiles
+  function renderProfiles() {
+    profileListEl.innerHTML = "";
+    profiles.forEach((p, i) => {
+      const card = document.createElement('div');
+      card.className = 'profile-card';
+      card.dataset.index = i;
+
+      card.innerHTML = `
+        <button class="delete-btn" title="Eliminar perfil">×</button>
+        <img src="${avatars[p.image]}" alt="Avatar de ${p.name}" />
+        <div class="profile-name">${p.name}</div>
+        <div class="profile-info">Año: ${p.year}<br>Sexo: ${p.sex}</div>
+      `;
+
+      // Seleccionar perfil
+      card.addEventListener('click', e => {
+        if(e.target.classList.contains('delete-btn')) return;
+        currentProfile = p;
+        showPinScreen();
+      });
+
+      // Eliminar perfil
+      card.querySelector('.delete-btn').addEventListener('click', e => {
+        e.stopPropagation();
+        if(confirm(`¿Eliminar perfil "${p.name}"?`)) {
+          profiles.splice(i, 1);
+          saveProfiles();
+          renderProfiles();
+          if(profiles.length < 4) addProfileBtn.disabled = false;
+        }
+      });
+
+      profileListEl.appendChild(card);
+    });
+
+    addProfileBtn.disabled = profiles.length >= 4;
+  }
+
+  // Limpiar formulario
+  function clearCreateForm() {
+    profileNameInput.value = "";
+    profileYearInput.value = "";
+    profileSexInput.value = "";
+    profilePinInput.value = "";
+    profileImageSelect.value = "avatar1";
+  }
+
+  // Mostrar pantallas
+  function showProfilesScreen() {
+    profilesScreen.style.display = 'block';
+    pinScreen.style.display = 'none';
+    app.style.display = 'none';
+    createProfileForm.style.display = 'none';
+    addProfileBtn.style.display = 'block';
+    clearCreateForm();
+  }
+  function showCreateProfileForm() {
+    createProfileForm.style.display = 'block';
+    addProfileBtn.style.display = 'none';
+  }
+  function showPinScreen() {
+    profilesScreen.style.display = 'none';
+    pinScreen.style.display = 'block';
+    app.style.display = 'none';
+    pinInput.value = "";
+    pinError.style.display = "none";
+    pinInput.focus();
+  }
+  function showApp() {
+    profilesScreen.style.display = 'none';
+    pinScreen.style.display = 'none';
+    app.style.display = 'flex';
+    loadFavorites();
+    loadChannels();
+  }
+
+  // Validar PIN
+  function validatePin() {
+    const pin = pinInput.value.trim();
+    if (!currentProfile.pin || currentProfile.pin === "") {
+      return true;
+    }
+    if (pin.length !== 4 || !/^\d{4}$/.test(pin)) {
+      pinError.textContent = "PIN debe tener 4 dígitos";
+      pinError.style.display = "block";
+      return false;
+    }
+    if (pin !== currentProfile.pin) {
+      pinError.textContent = "PIN incorrecto";
+      pinError.style.display = "block";
+      return false;
+    }
+    pinError.style.display = "none";
+    return true;
+  }
+
+  // Renderizar lista de canales (filtrada)
+  function renderChannels() {
+    list.innerHTML = "";
+
+    let displayChannels = filteredChannels;
+    if(showingFavoritesOnly) {
+      displayChannels = filteredChannels.filter(ch => favorites.includes(ch.url));
+    }
+
+    if(displayChannels.length === 0) {
+      list.innerHTML = `<div style="text-align:center; color:#888;">No se encontraron canales.</div>`;
+      return;
+    }
+    displayChannels.forEach((ch, i) => {
+      const div = document.createElement('div');
+      div.className = 'channel';
+      div.textContent = "▶ " + ch.name;
+
+      // Botón favorito
+      const favBtn = document.createElement('button');
+      favBtn.className = 'fav-btn';
+      favBtn.innerHTML = favorites.includes(ch.url) ? '★' : '☆';
+      favBtn.title = favorites.includes(ch.url) ? 'Quitar de favoritos' : 'Agregar a favoritos';
+
+      favBtn.onclick = (e) => {
+        e.stopPropagation();
+        toggleFavorite(ch.url, favBtn);
+      };
+
+      div.appendChild(favBtn);
+
+      div.onclick = () => {
+        const realIndex = channelsList.findIndex(c => c.url === ch.url);
+        playChannelByIndex(realIndex);
+      };
+
+      list.appendChild(div);
+    });
+  }
+
+  // Toggle favorito
+  function toggleFavorite(url, btn) {
+    const idx = favorites.indexOf(url);
+    if(idx >= 0) {
+      favorites.splice(idx, 1);
+      btn.innerHTML = '☆';
+      btn.title = 'Agregar a favoritos';
+    } else {
+      favorites.push(url);
+      btn.innerHTML = '★';
+      btn.title = 'Quitar de favoritos';
+    }
+    saveFavorites();
+    updateFavButton();
+    renderChannels();
+  }
+
+  // Reproducir canal por índice
+  function playChannelByIndex(index) {
+    if(index < 0 || index >= channelsList.length) return;
+    currentChannelIndex = index;
+    const ch = channelsList[index];
+    videoPlayer.src = ch.url;
+    videoPlayer.play();
+    updateFavButton();
+  }
+
+  // Actualizar botón favorito
+  function updateFavButton() {
+    if (!channelsList[currentChannelIndex]) return;
+    const url = channelsList[currentChannelIndex].url;
+    toggleFavBtn.textContent = favorites.includes(url) ? "⭐ Favorito" : "☆ Favorito";
+  }
+
+  // Cargar canales M3U
+  function loadChannels() {
+    status.textContent = "Cargando canales…";
+    list.innerHTML = "";
+    channelsList = [];
+    fetch(m3uUrl)
+      .then(r => r.text())
+      .then(data => {
+        const lines = data.split("\n");
+        let name = "";
+        let found = false;
+
+        for(let i=0; i < lines.length; i++) {
+          const line = lines[i].trim();
+          if(line.startsWith("#EXTINF")) {
+            name = line.split(",")[1] || "Canal";
+          } else if(line && !line.startsWith("#")) {
+            found = true;
+            channelsList.push({name, url: line});
+            name = "";
+          }
+        }
+        if(!found) {
+          status.textContent = "No se encontraron canales";
+          filteredChannels = [];
+          renderChannels();
+          return;
+        }
+        status.textContent = `Canales cargados: ${channelsList.length}`;
+        filteredChannels = [...channelsList];
+        renderChannels();
+        playChannelByIndex(0);
+      })
+      .catch(err => {
+        console.error("Error al cargar lista IPTV:", err);
+        status.textContent = "Error al cargar la lista IPTV";
+      });
+  }
+
+  // Filtro búsqueda
+  searchInput.addEventListener('input', () => {
+    const q = searchInput.value.toLowerCase();
+    filteredChannels = channelsList.filter(ch => ch.name.toLowerCase().includes(q));
+    renderChannels();
+  });
+
+  // Botón para alternar mostrar solo favoritos o todos
+  favFilterBtn.addEventListener('click', () => {
+    showingFavoritesOnly = !showingFavoritesOnly;
+    favFilterBtn.classList.toggle('active', showingFavoritesOnly);
+    favFilterBtn.textContent = showingFavoritesOnly ? "Mostrar Todos" : "Mostrar Favoritos";
+    renderChannels();
+  });
+
+  // Eventos botones reproductor
+  prevBtn.addEventListener('click', () => {
+    let newIndex = currentChannelIndex - 1;
+    if(showingFavoritesOnly) {
+      // Si está filtrando favoritos, navegar solo entre ellos
+      const favIndexes = channelsList
+        .map((ch, i) => favorites.includes(ch.url) ? i : -1)
+        .filter(i => i !== -1);
+      let pos = favIndexes.indexOf(currentChannelIndex);
+      if(pos === -1) pos = 0;
+      pos = (pos - 1 + favIndexes.length) % favIndexes.length;
+      newIndex = favIndexes[pos];
+    } else {
+      if(newIndex < 0) newIndex = channelsList.length -1;
+    }
+    playChannelByIndex(newIndex);
+  });
+  nextBtn.addEventListener('click', () => {
+    let newIndex = currentChannelIndex + 1;
+    if(showingFavoritesOnly) {
+      const favIndexes = channelsList
+        .map((ch, i) => favorites.includes(ch.url) ? i : -1)
+        .filter(i => i !== -1);
+      let pos = favIndexes.indexOf(currentChannelIndex);
+      if(pos === -1) pos = 0;
+      pos = (pos + 1) % favIndexes.length;
+      newIndex = favIndexes[pos];
+    } else {
+      if(newIndex >= channelsList.length) newIndex = 0;
+    }
+    playChannelByIndex(newIndex);
+  });
+  toggleFavBtn.addEventListener('click', () => {
+    if (!channelsList[currentChannelIndex]) return;
+    const url = channelsList[currentChannelIndex].url;
+    const idx = favorites.indexOf(url);
+    if(idx >= 0) {
+      favorites.splice(idx, 1);
+    } else {
+      favorites.push(url);
+    }
+    saveFavorites();
+    updateFavButton();
+    renderChannels();
+  });
+
+  // Teclado para cambio de canal
+  document.addEventListener('keydown', e => {
+    if(app.style.display === 'flex') {
+      if(e.key === "ArrowLeft") {
+        prevBtn.click();
+      } else if(e.key === "ArrowRight") {
+        nextBtn.click();
+      }
+    }
+  });
+
+  // Botones perfiles y PIN
+  addProfileBtn.addEventListener('click', () => {
+    showCreateProfileForm();
+  });
+  cancelCreateBtn.addEventListener('click', e => {
+    e.preventDefault();
+    createProfileForm.style.display = 'none';
+    addProfileBtn.style.display = 'block';
+  });
+  createProfileForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = profileNameInput.value.trim();
+    const year = parseInt(profileYearInput.value);
+    const sex = profileSexInput.value;
+    const pin = profilePinInput.value.trim();
+    const image = profileImageSelect.value;
+
+    if(!name || !year || !sex) {
+      alert("Por favor, completa todos los campos correctamente.");
+      return;
+    }
+    if(pin !== "" && !pin.match(/^\d{4}$/)) {
+      alert("El PIN debe tener 4 dígitos o dejarlo vacío.");
+      return;
+    }
+    if(profiles.length >= 4) {
+      alert("Solo puedes crear hasta 4 perfiles.");
+      return;
+    }
+
+    profiles.push({name, year, sex, pin, image});
+    saveProfiles();
+    renderProfiles();
+    createProfileForm.style.display = 'none';
+    addProfileBtn.style.display = 'block';
+  });
+  enterPinBtn.addEventListener('click', () => {
+    if(validatePin()) {
+      showApp();
+    }
+  });
+  pinBackBtn.addEventListener('click', () => {
+    showProfilesScreen();
+  });
+  logoutBtn.addEventListener('click', () => {
+    currentProfile = null;
+    showingFavoritesOnly = false;
+    favFilterBtn.classList.remove('active');
+    favFilterBtn.textContent = "Mostrar Favoritos";
+    showProfilesScreen();
+  });
+
+  // Inicio
+  loadProfiles();
+  renderProfiles();
+  showProfilesScreen();
+
+</script>
+</body>
+</html>
